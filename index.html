@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Magazine Blog with Translator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="main-header">
+  <div class="logo-section">
+    <h1 class="site-title">My Blogs</h1>
+    <p class="site-tagline">Fresh Stories • Inspiring Ideas • Global Trends</p>
+  </div>
+  <div class="header-controls">
+    <input type="text" id="searchBar" placeholder="Search articles..." />
+    <div id="google_translate_element" class="language-selector"></div>
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌙</button>
+  </div>
+</header>
+
+
+
+
+
+<div id="google_translate_element" style="position: fixed; top: 80px; right: 20px; z-index: 10000;"></div>
+
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80" alt="Featured Blog" />
+  <div class="hero-overlay">
+    <h2 id="heroTitle">The Future of Blogging: Trends for 2025</h2>
+    <p>Explore how AI, personalization, and immersive storytelling are reshaping blogs.</p>
+    <button class="read-featured">Read More</button>
+  </div>
+</section>
+
+<div class="container">
+  <main class="blog-grid" id="blogList"></main>
+
+  <aside class="sidebar">
+    <h3>Trending</h3>
+    <ul id="popularPosts"></ul>
+    <h3>Categories</h3>
+    <div id="tags">
+      <span class="tag tech">#Tech</span>
+      <span class="tag lifestyle">#Lifestyle</span>
+      <span class="tag travel">#Travel</span>
+    </div>
+  </aside>
+</div>
+
+<div class="load-more">
+  <button id="loadMore">Load More</button>
+</div>
+
+<div id="postModal" class="modal">
+  <div class="modal-content">
+    <span class="close" title="Close Modal">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalMeta"></p>
+    <img id="modalImage" alt="Post image" />
+    <p id="modalContent"></p>
+
+    <div class="comments-section">
+      <h3>Comments</h3>
+      <div id="commentsList"></div>
+      <textarea id="commentInput" placeholder="Add a comment..."></textarea>
+      <button id="addComment">Post Comment</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>© 2025 <strong>My Colorful Magazine</strong> • Designed with ❤️ for curious minds</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+<!-- Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,fr,de,zh-CN,hi,ar,ru,ja,it,pt,ko,tr,th,pl,sv,nl,uk,vi,bn',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+
+
+</body>
+</html>
